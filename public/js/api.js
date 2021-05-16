@@ -19,11 +19,11 @@ function renderUserCard(parameter) {
           year: "numeric",
           timeZone: "Africa/Nairobi",
         }
-      )}</p>
-      <a class="id" href="${parameter.url}"> Link to ${
+      )}</p>    
+  <a class="id" href="/${parameter.username}">Edit profile</a> | 
+  <a class="id" href="${parameter.url}"> Link to ${
     parameter.last_name
-  } json data</a> |      
-  <a class="id" href="/${parameter.username}">Edit profile</a>
+  } json data</a>
     </div>
   </div>
   `
