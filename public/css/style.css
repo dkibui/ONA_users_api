@@ -117,6 +117,12 @@ input:focus {
 
 .nav-wrapper__text > a {
   text-decoration: none;
+  padding-left: 0.85rem;
+  font-size: 0.95rem;
+}
+
+.nav-wrapper__text > a:first-child {
+  padding-left: 0;
 }
 
 .nav-wrapper__logo {

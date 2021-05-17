@@ -31,12 +31,14 @@ function renderUserCard(parameter) {
 
 fetch(
   "https://api.ona.io/api/v1/profiles?format=json&users=alice%2Cbob%2Ccharlene"
+  // { mode: "no-cors" }
 )
-  .then((resp) => resp.json())
+  .then((response) => response.json())
   .then((data) => {
     console.log(data)
     if (data.length) {
       data.forEach((user) => {
+        console.log("here")
         outPutHtml = `${outPutHtml} ${renderUserCard(user)}`
         targetDiv.innerHTML = outPutHtml
       })
@@ -44,6 +46,6 @@ fetch(
       targetDiv.innerHTML = "No users were returned from this api"
     }
   })
-  .catch(function (error) {
+  .catch((error) => {
     console.log(error)
   })

@@ -14,6 +14,20 @@ app.get("/", (req, res) => {
   res.render("index")
 })
 
+app.get("/users", (req, res) => {
+  axios
+    .get(
+      `https://api.ona.io/api/v1/profiles?format=json&users=alice%2Cbob%2Ccharlene`
+    )
+    .then((resp) => {
+      let data = resp.data
+      res.render("users", { data })
+    })
+    .catch((error) => {
+      console.log("error")
+    })
+})
+
 app.get("/:id", (req, res) => {
   let param = req.params.id
   axios

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <%- include("partials/Nav.ejs") %>
+        <div class="container">
+            <h1>ONA users api</h1>
+            <div class="wrapper">
+                <% data.forEach(user=> { %>
+                    <div class="users__user-card">
+                        <div class="avatar">
+                            <img class="users__avatar" src="<%=user.gravatar %>"
+                                alt="User's avatar">
+                        </div>
+                        <div class="users__card-paragraph">
+                            <p class="name">
+                                <%=user.name %>
+                            </p>
+                            <p class="id">Joined on: <%= new
+                                    Date(user.joined_on).toLocaleString( "en-US"
+                                    , { month: "long" , day: "2-digit" ,
+                                    year: "numeric" , timeZone: "Africa/Nairobi"
+                                    , }) %>
+                            </p>
+                            <a class="id" href="<%=user.username %>">Edit
+                                profile</a> |
+                            <a class="id" href="<%=user.url %>"> Link to json
+                                data</a>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+</body>
+
+</html>
+<p>
+
+</p>
