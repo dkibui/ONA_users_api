@@ -107,9 +107,9 @@ input:focus {
   outline: none;
 }
 
-.header {
+/* .header {
   border-bottom: 1px solid #eceef2;
-}
+} */
 
 .nav-wrapper {
   width: 95%;
