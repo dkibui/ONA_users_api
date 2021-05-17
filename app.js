@@ -21,6 +21,7 @@ app.get("/users", (req, res) => {
     )
     .then((resp) => {
       let data = resp.data
+
       res.render("users", { data })
     })
     .catch((error) => {
