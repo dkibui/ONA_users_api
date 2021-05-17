@@ -16,6 +16,24 @@
             <div class="wrapper">
             </div>
         </div>
+        <div class="container">
+            <p class="message">
+                This page makes a GET fetch request to:
+                <a
+                    href="https://api.ona.io/api/v1/profiles?format=json&users=alice%2Cbob%2Ccharlene">link</a>
+                or
+                "https://api.ona.io/api/v1/profiles?format=json&users=alice%2Cbob%2Ccharlene"
+            </p>
+            <p class="message">
+                The API server has restrictive "Access-Control-Allow-Origin"
+                setting therefore the browser cannot display the returned object
+                because of CORS policy.
+            </p>
+            <p class="message">
+                I have re-implemented the same api request through the server
+                see <a href="/users">"Users"</a> link
+            </p>
+        </div>
         <script src="js/api.js">
         </script>
 </body>
